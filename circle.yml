@@ -1,0 +1,12 @@
+dependencies:
+  pre:
+    - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/ppa
+    - sudo apt-get update     --yes
+    - sudo apt-get install    --yes g++
+  override:
+    - ./configure
+    - make
+
+test:
+  override:
+    - make test
